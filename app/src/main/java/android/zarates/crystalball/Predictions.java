@@ -7,7 +7,8 @@ public class Predictions {
 
     private Predictions(){
         answers = new String[]{
-                "Yo whishes will come true.........SIKE!!!!! "
+                "Yo whishes will come true.........SIKE!!!!! ",
+                "Go kill yourself"
         };
     }
     public static Predictions get(){
@@ -18,6 +19,6 @@ public class Predictions {
     }
 
     public String getPredictions(){
-        return answers[0];
+        return answers[1];
     }
 }
