@@ -4,6 +4,7 @@
     <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
         <item name="android:windowFullscreen">true</item>
         <item name="android:actionBarSize">0px</item>
+        <item name="android:textColor">#FFFFFF</item>
         <!-- Customize your theme here. -->
     </style>
 
