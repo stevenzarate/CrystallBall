@@ -8,7 +8,7 @@ public class Predictions {
     private Predictions(){
         answers = new String[]{
                 "Yo whishes will come true.........SIKE!!!!! ",
-                "Go kill yourself"
+                "Go kill yourself    "
         };
     }
     public static Predictions get(){
