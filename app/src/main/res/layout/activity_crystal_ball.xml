@@ -10,7 +10,6 @@
         android:layout_height="match_parent"
         android:src="@drawable/ball01"
         android:background="#000"
-
         />
 
     <TextView
@@ -20,7 +19,6 @@
         android:textColor = "#FFFFFF"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:textSize="30sp"
         />
 
 </RelativeLayout>
