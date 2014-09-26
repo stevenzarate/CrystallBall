@@ -20,5 +20,6 @@ public class Predictions {
 
     public String getPredictions(){
         return answers[1];
+        
     }
 }
