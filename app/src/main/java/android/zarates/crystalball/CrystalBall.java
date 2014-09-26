@@ -1,11 +1,13 @@
 package android.zarates.crystalball;
 
+import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.FloatMath;
 import android.widget.TextView;
@@ -36,6 +38,13 @@ public class CrystalBall extends Activity {
             if (acceleration > 15) {
                 Toast toast = Toast.makeText(getApplication(), "Device has shaken", Toast.LENGTH_SHORT);
                 toast.show();
+                MediaPlayer mediaPlayer = MediaPlayer.create(getApplication(), R.raw.crystal_ball);
+                mediaPlayer.start();
+                answerText = (TextView) findViewById(R.id.answerText);
+                answerText.setText(Predictions.get().getPredictions());
+                ValueAnimator animation = ValueAnimator.ofFloat(0f, 1f);
+                animation.setDuration(1000);
+                animation.start();
             }
         }
 
@@ -43,8 +52,6 @@ public class CrystalBall extends Activity {
         public void onAccuracyChanged(Sensor sensor, int accuracy) {
 
         }
-
-
 
     };
 
@@ -61,8 +68,6 @@ public class CrystalBall extends Activity {
         currentAcceleration = SensorManager.GRAVITY_EARTH;
         previousAcceleration = SensorManager.GRAVITY_EARTH;
 
-        answerText = (TextView) findViewById(R.id.answerText);
-        answerText.setText(Predictions.get().getPredictions());
     }
 
     @Override
